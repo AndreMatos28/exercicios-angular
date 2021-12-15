@@ -1,70 +1,9 @@
-class Carro {
-    private modelo: string;
-    private numeroDePortas: number;
-    private velocidade: number = 0;
+import Carro from "./Carro";
+import Pessoa from "./Pessoa";
+import Concessionaria from "./Concessionaria";
+import Moto from "./Moto";
 
-    constructor(modelo: string, numeroDePortas: number){
-        this.modelo = modelo;
-        this.numeroDePortas = numeroDePortas;
-    }
 
-    public acelerar (): void {
-        this.velocidade += +10;
-    }
-
-    public parar(): void {
-        this.velocidade = 0;
-    }
-
-    public velocidadeAtual(): number {
-        return this.velocidade;
-    }    
-}
-
-class Concessionaria {
-    private endereco: string;
-    private listaCarros: Carro[];
-
-    constructor (endereco: string, listaDeCarros: Carro[]){
-        this.endereco = endereco;
-        this.listaCarros = listDeCarros;
-    }
-
-    public fornecerEndereco(): string {
-        return this.endereco;
-    }
-
-    public mostrarListaDeCarros(): Carro[] {
-        return this.listaCarros;
-    }
-}
-
-class Pessoa {
-    private nome: string;
-    private carro: Carro;
-    private carroPrefido: string;
-
-    constructor (nome: string, carroPrefido: string){
-        this.carroPrefido = carroPrefido;
-        this.nome = nome;
-    }
-
-    public dizerNome(): string {
-       return this.nome;
-    }
-
-    public dizerCarroPreferido(): string {
-        return this.carroPrefido;
-    }
-
-    public comprarCarro(carro: Carro): void  {
-        this.carro = carro;
-    }
-
-    public CarroQueTem(): Carro{
-        return this.carro;
-    }
-}
 
 // criar carros
 let carroA = new Carro("Dodge", 4);
@@ -95,4 +34,9 @@ concessionaria.mostrarListaDeCarros().map((carro: Carro) => {
 
 });
 
-console.log(cliente.CarroQueTem());
+let moto = new Moto("Susuki");
+
+console.log(listDeCarros);
+moto.acelerar();
+moto.acelerar();
+console.log(moto);
